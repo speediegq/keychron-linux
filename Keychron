@@ -2,7 +2,8 @@
 
 # Keychron keyboard function key support for OpenRC systems (Tested with gentoo)
 
-echo 2 > /sys/module/hid_apple/parameters/fnmode
+# Replace 0 with 2 if you're using an Apple keyboard
+echo 0 > /sys/module/hid_apple/parameters/fnmode
 
 exit
 
