@@ -1,0 +1,9 @@
+    [Unit]
+    Description=Linux Keychron function key support with systemd
+
+    [Service]
+    Type=idle
+    ExecStart=/bin/bash echo 0 | doas tee /sys/module/hid_apple/parameters/fnmode || echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
+    
+    [Install]
+    WantedBy=graphical.target

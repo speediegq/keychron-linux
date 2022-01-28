@@ -1,0 +1,8 @@
+#!/sbin/openrc-run
+
+# Keychron keyboard function key support for OpenRC systems (Tested with gentoo)
+
+echo 0 | doas tee /sys/module/hid_apple/parameters/fnmode || echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
+
+exit
+
