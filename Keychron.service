@@ -3,7 +3,7 @@
 
     [Service]
     Type=idle
-    ExecStart=/bin/bash echo 2 > /sys/module/hid_apple/parameters/fnmode
+    ExecStart=/bin/bash echo 0 > /sys/module/hid_apple/parameters/fnmode # Replace 0 with 2 if you're using an Apple keyboard
     
     [Install]
     WantedBy=graphical.target
